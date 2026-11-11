@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffe4ef" />
+  <title>Happy Birthday Gehad 🎀</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+    :root{--pink:#ec4899;--deep:#be185d;--pale:#fff1f7;--ink:#71304e}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Cairo',sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#fff 0 8%,transparent 30%),linear-gradient(135deg,#fff7fb,#ffe4ef 55%,#fff0f6);min-height:100vh;overflow-x:hidden}
+    .float{position:fixed;pointer-events:none;opacity:.45;animation:drift 9s ease-in-out infinite;font-size:24px;z-index:0}
+    .f1{top:12%;left:7%}.f2{top:60%;right:5%;animation-delay:2s}.f3{top:82%;left:13%;animation-delay:4s}
+    @keyframes drift{50%{transform:translateY(-22px) rotate(12deg)}}
+    header{position:relative;z-index:1;text-align:center;padding:58px 18px 26px}
+    .eyebrow{display:inline-block;background:#fff8;border:1px solid #f9b8d2;border-radius:999px;padding:7px 17px;font-size:13px;color:var(--deep);font-weight:800;letter-spacing:.4px}
+    h1{font-size:clamp(38px,8vw,76px);line-height:1.2;margin:18px 0 8px;color:var(--deep);font-weight:900;text-shadow:0 5px 0 #fff}
+    .sub{font-size:clamp(15px,2.6vw,19px);margin:0 auto;color:#98506f}
+    .sparkle{color:#f59e0b}
+    main{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:16px 18px 70px}
+    .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px auto 22px;max-width:720px}
+    .tab{border:1px solid #f5b4d0;background:#ffffffc9;color:var(--deep);border-radius:20px;padding:16px 10px;font:800 15px 'Cairo';cursor:pointer;box-shadow:0 8px 24px #c44b7d12;transition:.2s}
+    .tab span{display:block;font-size:25px;margin-bottom:3px}
+    .tab.active,.tab:hover{background:linear-gradient(135deg,#f9a8d4,#ec4899);color:white;transform:translateY(-3px);box-shadow:0 12px 25px #ec489944}
+    .panel{display:none;background:#ffffffd9;border:1px solid #fff;border-radius:30px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 55px #a52c6417;backdrop-filter:blur(12px);animation:show .35s ease}
+    .panel.active{display:block}
+    @keyframes show{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    h2{text-align:center;color:var(--deep);font-size:clamp(23px,4vw,32px);margin:0 0 20px}
+    .letter{max-width:680px;margin:auto;text-align:center;font-size:18px;line-height:2.1;white-space:pre-line}
+    .signature{color:var(--pink);font-weight:900;margin-top:22px;text-align:center}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .photo{aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#fbcfe8,#fce7f3);border:2px dashed #f0a5c5;display:grid;place-items:center;color:#a33b6b;text-align:center;padding:12px}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo .placeholder{font-size:14px;font-weight:700}
+    .video-wrap{max-width:760px;margin:auto}
+    .video{position:relative;padding-top:56.25%;border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#fbcfe8,#fce7f3);border:1px solid #f8c0d8}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-placeholder{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:8px;color:#a33b6b;padding:20px}
+    .video-placeholder b{font-size:42px}
+    .hint{text-align:center;font-size:13px;color:#a46a84;margin-top:15px}
+    footer{text-align:center;padding:0 15px 30px;color:#a46a84;font-size:13px;position:relative;z-index:1}
+    @media(max-width:620px){header{padding-top:42px}.tabs{gap:7px}.tab{padding:12px 4px;font-size:13px;border-radius:15px}.tab span{font-size:22px}.gallery{grid-template-columns:repeat(2,1fr)}.panel{border-radius:23px}}
+  
+.music-player {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, calc(100% - 24px));
+  background: rgba(255,255,255,.96);
+  border: 1px solid #f5b4d0;
+  border-radius: 22px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 8px 30px #be185d30;
+  z-index: 9999;
+  direction: ltr;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.music-cover {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#f9a8d4,#ec4899);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.music-details {
+  min-width: 0;
+}
+
+.music-details strong,
+.music-details small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.music-details strong {
+  color: #be185d;
+  font-size: 13px;
+}
+
+.music-details small {
+  color: #a46a84;
+  font-size: 11px;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.music-controls button {
+  border: none;
+  cursor: pointer;
+  background: #fce7f3;
+  color: #be185d;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+}
+
+.music-controls #playBtn {
+  background: #ec4899;
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+@media(max-width:480px) {
+  .music-player {
+    bottom: 10px;
+    padding: 9px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="float f1">💗</div><div class="float f2">🌸</div><div class="float f3">✨</div>
+  <header>
+    <div class="eyebrow">A LITTLE SURPRISE MADE WITH LOVE</div>
+    <h1>Happy Birthday<br>Gehad 🎀</h1>
+    <p class="sub">كل سنة وإنتِ أجمل  أخت في الدنيا <span class="sparkle">✨</span></p>
+  </header>
+
+  <main>
+    <nav class="tabs" aria-label="أقسام المفاجأة">
+      <button class="tab active" data-panel="message"><span>💌</span>رسالة</button>
+      <button class="tab" data-panel="photos"><span>📸</span>صورنا</button>
+      <button class="tab" data-panel="video"><span>🎬</span>فيديو</button>
+    </nav>
+
+    <section class="panel active" id="message">
+      <h2>رسالة مخصوص ليكي يا Gehad 💗</h2>
+      <div class="letter" id="birthdayMessage">كل سنة وإنتِ طيبة يا هبله والف الف الف مبروك نقص سنه من عمرك وعقبال كدا لما تشوفي عيالي (مع اني هتجوز بدري مش هتلحقي تموتي🙂)
+        وكدا عقبال ما تتجوزي الجوز (او الجوز🙂) الصالح ونخلص منك وتكبري كدا وتبقي عجوزه (اوعي تبقي زي حني)
+        ومش عارف اقول ايه تاني اخلعي
+وكل سنة وإنتِ أحلى أخت في الدنيا💕</div>
+      <div class="signature">your bro made this bi*** ♡</div>
+    </section>
+
+    <section class="panel" id="photos">
+      <h2>ذكرياتنا الحلوة 📷</h2>
+      <div class="gallery" id="gallery">
+        <div class="photo"><div class="placeholder"><br> المره الجايه اديني الموبايل اتنيلي بوظتي المفاجأه<br><small>assets/photo1.jpg</small></div></div>
+        <div class="photo"><div class="placeholder"><br0> </br0><br><small>assets/photo2.jpg</small></div></div>
+        <div class="photo"><div class="placeholder"><br><small>assets/photo3.jpg</small></div></div>
+      </div>
+      <p class="hint"></p>index.html.</p>
+    </section>
+
+    <section class="panel" id="video">
+      <h2></h2>
+      <div class="video-wrap">
+        <div class="video" id="videoContainer">
+            <div class="video-placeholder"><b>▶</b><stron></stron></strong><span>ضيفي رابط YouTube في ملف index.html</span></div>
+        </div>
+      </div>
+      <p class="hint"></p></p>
+    </section>
+  </main>
+  <footer>Made with 💗 for Gehad · Happy Birthday!</footer>
+<!-- Birthday Music Player -->
+<div class="music-player" id="musicPlayer">
+
+  <div class="music-info">
+    <div class="music-cover" id="musicCover">🎂</div>
+    <div class="music-details">
+      <strong id="songTitle">Birthday</strong>
+      <small id="songArtist">The Beatles</small>
+    </div>
+  </div>
+
+  <div class="music-controls">
+    <button id="prevBtn" aria-label="Previous">⏮</button>
+    <button id="playBtn" aria-label="Play or pause">▶</button>
+    <button id="nextBtn" aria-label="Next">⏭</button>
+  </div>
+
+  <audio id="birthdayAudio"></audio>
+
+</div> 
+
+  <script>
+    // التنقل بين الأقسام
+    document.querySelectorAll('.tab').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(button.dataset.panel).classList.add('active');
+      });
+    });
+
+    // الصور: ضعي ملفاتك داخل مجلد assets واكتبي أسماءها هنا
+    const photos = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg'];
+    const gallery = document.getElementById('gallery');
+    photos.forEach((file, index) => {
+      const card = document.createElement('div');
+      card.className = 'photo';
+      const img = document.createElement('img');
+      img.src = 'assets/' + file;
+      img.alt = 'ذكرى جميلة ' + (index + 1);
+      img.onerror = () => {
+        card.innerHTML = '<div class="placeholder"><br><br><small>assets/' + file + '</small></div>';
+      };
+      card.appendChild(img);
+      gallery.appendChild(card);
+    });
+
+    
+// YouTube Video
+const youtubeVideoId = 'wNut8QshEx0';
+
+if (youtubeVideoId.trim()) {
+  document.getElementById('videoContainer').innerHTML =
+    `<iframe
+      src="https://www.youtube.com/embed/${youtubeVideoId}"
+      title="Birthday video for Gehad"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>`;
+}
+
+  
+const songs = [
+  {
+    title: "Birthday",
+    artist: "The Beatles",
+    file: "music/beatles.mp3",
+    cover: "🎸"
+  },
+  {
+    title: "Birthday",
+    artist: "Katy Perry",
+    file: "music/katy-perry.mp3",
+    cover: "🎉"
+  },
+  {
+    title: "Cake by the Ocean",
+    artist: "DNCE",
+    file: "music/dnce.mp3",
+    cover: "🍰"
+  },
+  {
+    title: "Celebration",
+    artist: "Kool & The Gang",
+    file: "music/celebration.mp3",
+    cover: "🪩"
+  }
+];
+
+let currentSong = 0;
+
+const audio = document.getElementById("birthdayAudio");
+const playBtn = document.getElementById("playBtn");
+
+function loadSong(index, autoplay = false) {
+  currentSong = (index + songs.length) % songs.length;
+
+  const song = songs[currentSong];
+
+  audio.src = song.file;
+
+  document.getElementById("songTitle").textContent = song.title;
+  document.getElementById("songArtist").textContent = song.artist;
+  document.getElementById("musicCover").textContent = song.cover;
+
+  if (autoplay) {
+    audio.play().catch(() => {
+      playBtn.textContent = "▶";
+    });
+  }
+}
+
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+audio.addEventListener("play", () => {
+  playBtn.textContent = "Ⅱ";
+});
+
+audio.addEventListener("pause", () => {
+  playBtn.textContent = "▶";
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  loadSong(currentSong + 1, true);
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  loadSong(currentSong - 1, true);
+});
+
+audio.addEventListener("ended", () => {
+  loadSong(currentSong + 1, true);
+});
+
+loadSong(0);
+
+  </script>
+
+</body>
+</html>
